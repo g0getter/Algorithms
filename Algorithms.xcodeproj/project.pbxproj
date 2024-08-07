@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		36DA3CE72C6351C7003DD7F1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA3CE62C6351C7003DD7F1 /* main.swift */; };
 		36DA3CEF2C6352B5003DD7F1 /* HeightChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA3CEE2C6352B5003DD7F1 /* HeightChecker.swift */; };
+		36DA3CF22C6359CD003DD7F1 /* ThirdMaximumNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA3CF12C6359CD003DD7F1 /* ThirdMaximumNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		36DA3CE32C6351C7003DD7F1 /* Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DA3CE62C6351C7003DD7F1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		36DA3CEE2C6352B5003DD7F1 /* HeightChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightChecker.swift; sourceTree = "<group>"; };
+		36DA3CF12C6359CD003DD7F1 /* ThirdMaximumNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdMaximumNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		36DA3CE52C6351C7003DD7F1 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				36DA3CF02C6359B7003DD7F1 /* 414_ThirdMaximumNumber */,
 				36DA3CED2C63525A003DD7F1 /* 1051_HeightChecker */,
 				36DA3CE62C6351C7003DD7F1 /* main.swift */,
 			);
@@ -71,6 +74,14 @@
 				36DA3CEE2C6352B5003DD7F1 /* HeightChecker.swift */,
 			);
 			path = 1051_HeightChecker;
+			sourceTree = "<group>";
+		};
+		36DA3CF02C6359B7003DD7F1 /* 414_ThirdMaximumNumber */ = {
+			isa = PBXGroup;
+			children = (
+				36DA3CF12C6359CD003DD7F1 /* ThirdMaximumNumber.swift */,
+			);
+			path = 414_ThirdMaximumNumber;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DA3CF22C6359CD003DD7F1 /* ThirdMaximumNumber.swift in Sources */,
 				36DA3CEF2C6352B5003DD7F1 /* HeightChecker.swift in Sources */,
 				36DA3CE72C6351C7003DD7F1 /* main.swift in Sources */,
 			);
