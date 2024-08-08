@@ -13,8 +13,8 @@ class HeightChecker: Solution {
         var count = 0
         // let expected = heights.sorted() // Sol1. Use built-in sort func
         let expected = bubbleSort(heights) // Sol2. Use Bubble sort
-        // let expec
-        
+        // let expected = mer// Sol3. Use Merge sort
+
         for (index, height) in heights.enumerated() {
             if height != expected[index] {
                 count += 1
@@ -42,6 +42,7 @@ class HeightChecker: Solution {
         return sortedList
     }
     
+    // Time complexity: O(nlogn)
     private func mergeSort(_ list: [Int]) -> [Int] {
         let result: [Int] = []
         // 1. Divide into two halves

@@ -17,9 +17,12 @@ import Foundation
 //let result = ThirdMaximumNumber().thirdMax(input)
 
 /// Find All Numbers Disappeared in an Array
-let input = [4,3,2,7,8,2,3,1]
-let result = FindAllNumbersDisappeared().findDisappearedNumbers(input)
+//let input = [4,3,2,7,8,2,3,1]
+//let result = FindAllNumbersDisappeared().findDisappearedNumbers(input)
 
+/// Squares of a Sorted Array
+let input = [-4,-1,0,3,10]
+let result = SquaresOfASortedArray().sortedSquares(input)
 print("input: \(input)\nresult: \(result)\n")
 
 
