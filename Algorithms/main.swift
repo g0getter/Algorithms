@@ -21,8 +21,13 @@ import Foundation
 //let result = FindAllNumbersDisappeared().findDisappearedNumbers(input)
 
 /// Squares of a Sorted Array
-let input = [-4,-1,0,3,10]
-let result = SquaresOfASortedArray().sortedSquares(input)
+//let input = [-4,-1,0,3,10]
+//let result = SquaresOfASortedArray().sortedSquares(input)
+
+///
+var input = [1,0,2,3,0,4,5,0]
+let result = DuplicateZeros().duplicateZeros(&input)
+
 print("input: \(input)\nresult: \(result)\n")
 
 
