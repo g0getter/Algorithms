@@ -24,11 +24,16 @@ import Foundation
 //let input = [-4,-1,0,3,10]
 //let result = SquaresOfASortedArray().sortedSquares(input)
 
-///
-var input = [1,0,2,3,0,4,5,0]
-let result = DuplicateZeros().duplicateZeros(&input)
+/// Duplicate Zeros
+//var input = [1,0,2,3,0,4,5,0]
+//let result = DuplicateZeros().duplicateZeros(&input)
 
-print("input: \(input)\nresult: \(result)\n")
+/// Merge Sorted Array
+var nums1 = [4,5,6, 0,0,0]
+let m = 3, nums2 = [1,2,3], n = 3
+MergeSortedArray().merge(&nums1, m, nums2, n)
+print("nums1: \(nums1)")
 
+//print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
