@@ -29,10 +29,16 @@ import Foundation
 //let result = DuplicateZeros().duplicateZeros(&input)
 
 /// Merge Sorted Array
-var nums1 = [4,5,6, 0,0,0]
-let m = 3, nums2 = [1,2,3], n = 3
-MergeSortedArray().merge(&nums1, m, nums2, n)
-print("nums1: \(nums1)")
+//var nums1 = [4,5,6, 0,0,0]
+//let m = 3, nums2 = [1,2,3], n = 3
+//MergeSortedArray().merge(&nums1, m, nums2, n)
+//print("nums1: \(nums1)")
+
+/// Remove Element
+var nums = [0,1,2,2,3,0,4,2]
+let val = 2
+RemoveElement().removeElement(&nums, val)
+print("nums: \(nums)")
 
 //print("input: \(input)\nresult: \(result)\n")
 
