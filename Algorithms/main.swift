@@ -35,11 +35,14 @@ import Foundation
 //print("nums1: \(nums1)")
 
 /// Remove Element
-var nums = [0,1,2,2,3,0,4,2]
-let val = 2
-RemoveElement().removeElement(&nums, val)
-print("nums: \(nums)")
+//var nums = [0,1,2,2,3,0,4,2]
+//let val = 2
+//RemoveElement().removeElement(&nums, val)
+//print("nums: \(nums)")
 
-//print("input: \(input)\nresult: \(result)\n")
+/// Remove Duplicates from Sorted Array
+var input = [0,0,1,1,1,2,2,3,3,4]
+let result = RemoveDuplicatesFromSortedArray().removeDuplicates(&input)
+print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
