@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Time Complexity: O(n), Space Complexity: O(1)
 class RemoveDuplicatesFromSortedArray: Solution {
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         // Use two pointers
@@ -14,9 +15,7 @@ class RemoveDuplicatesFromSortedArray: Solution {
         var k = 1 // 1 <= nums.length <= 3 * 104
 
         for num in nums {
-            if nums[maxValidIndex] == num {
-                continue
-            } else {
+            if nums[maxValidIndex] != num {
                 nums[maxValidIndex+1] = num
                 maxValidIndex += 1
                 k += 1
