@@ -41,8 +41,12 @@ import Foundation
 //print("nums: \(nums)")
 
 /// Remove Duplicates from Sorted Array
-var input = [0,0,1,1,1,2,2,3,3,4]
-let result = RemoveDuplicatesFromSortedArray().removeDuplicates(&input)
+//var input = [0,0,1,1,1,2,2,3,3,4]
+//let result = RemoveDuplicatesFromSortedArray().removeDuplicates(&input)
+
+/// Check If N and Its Double Exist
+var input = [3,1,7,11]
+let result = CheckIfNandItsDoubleExist().checkIfExist(input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}

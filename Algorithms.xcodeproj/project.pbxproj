@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3619B8E82C732AC3003A8F94 /* CheckIfNandItsDoubleExist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619B8E72C732AC3003A8F94 /* CheckIfNandItsDoubleExist.swift */; };
 		36DA3CE72C6351C7003DD7F1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA3CE62C6351C7003DD7F1 /* main.swift */; };
 		36DA3CEF2C6352B5003DD7F1 /* HeightChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA3CEE2C6352B5003DD7F1 /* HeightChecker.swift */; };
 		36DA3CF22C6359CD003DD7F1 /* ThirdMaximumNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA3CF12C6359CD003DD7F1 /* ThirdMaximumNumber.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3619B8E72C732AC3003A8F94 /* CheckIfNandItsDoubleExist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfNandItsDoubleExist.swift; sourceTree = "<group>"; };
 		36DA3CE32C6351C7003DD7F1 /* Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DA3CE62C6351C7003DD7F1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		36DA3CEE2C6352B5003DD7F1 /* HeightChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightChecker.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3619B8E62C732A8F003A8F94 /* 1346_CheckIfNandItsDoubleExist */ = {
+			isa = PBXGroup;
+			children = (
+				3619B8E72C732AC3003A8F94 /* CheckIfNandItsDoubleExist.swift */,
+			);
+			path = 1346_CheckIfNandItsDoubleExist;
+			sourceTree = "<group>";
+		};
 		36DA3CDA2C6351C7003DD7F1 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		36DA3CE52C6351C7003DD7F1 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				3619B8E62C732A8F003A8F94 /* 1346_CheckIfNandItsDoubleExist */,
 				36DA3D082C6DB400003DD7F1 /* 26_RemoveDuplicatesFromSortedArray */,
 				36DA3D052C6C456D003DD7F1 /* 27_RemoveElement */,
 				36DA3D022C6B1A44003DD7F1 /* 88_MergeSortedArray */,
@@ -212,6 +223,7 @@
 				36DA3CEF2C6352B5003DD7F1 /* HeightChecker.swift in Sources */,
 				36DA3D042C6B1BA5003DD7F1 /* MergeSortedArray.swift in Sources */,
 				36DA3CF52C635BB2003DD7F1 /* FindAllNumbersDisappeared.swift in Sources */,
+				3619B8E82C732AC3003A8F94 /* CheckIfNandItsDoubleExist.swift in Sources */,
 				36DA3D0A2C6DB421003DD7F1 /* RemoveDuplicatesFromSortedArray.swift in Sources */,
 				36DA3CFB2C6490BE003DD7F1 /* SquaresOfASortedArray.swift in Sources */,
 				36DA3CE72C6351C7003DD7F1 /* main.swift in Sources */,
