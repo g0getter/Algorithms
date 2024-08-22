@@ -45,8 +45,12 @@ import Foundation
 //let result = RemoveDuplicatesFromSortedArray().removeDuplicates(&input)
 
 /// Check If N and Its Double Exist
-var input = [3,1,7,11]
-let result = CheckIfNandItsDoubleExist().checkIfExist(input)
+//var input = [3,1,7,11]
+//let result = CheckIfNandItsDoubleExist().checkIfExist(input)
+
+/// Valid Mountain Array
+var input = [0,3,2,1]
+let result = ValidMountainArray().validMountainArray(input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
