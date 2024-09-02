@@ -53,8 +53,12 @@ import Foundation
 //let result = ValidMountainArray().validMountainArray(input)
 
 /// Replace Elements with Greatest Element on Right Side
-var input = [17,18,5,4,6,1]
-let result = ReplaceElementswithGreatestElementonRightSide().replaceElements(input)
+//var input = [17,18,5,4,6,1]
+//let result = ReplaceElementswithGreatestElementonRightSide().replaceElements(input)
+
+/// Move Zeroes
+var input = [0,1,0,3,12]
+let result = MoveZeroes().moveZeroes(&input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
