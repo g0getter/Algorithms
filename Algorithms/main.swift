@@ -57,8 +57,13 @@ import Foundation
 //let result = ReplaceElementswithGreatestElementonRightSide().replaceElements(input)
 
 /// Move Zeroes
-var input = [0,1,0,3,12]
-let result = MoveZeroes().moveZeroes(&input)
+//var input = [0,1,0,3,12]
+//let result = MoveZeroes().moveZeroes(&input)
+
+/// Sort Array By Parity
+var input = [3,1,2,4]
+let result = SortArrayByParity().sortArrayByParity(input)
+
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
