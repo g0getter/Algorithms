@@ -65,8 +65,12 @@ import Foundation
 //let result = SortArrayByParity().sortArrayByParity(input)
 
 /// Find Pivot Index
-var input = [1,7,3,6,5,6]
-let result = FindPivotIndex().pivotIndex(input)
+//var input = [1,7,3,6,5,6]
+//let result = FindPivotIndex().pivotIndex(input)
+
+/// Largest Number At Least Twice of Others
+var input = [3,6,1,0]
+let result = LargestNumberAtLeastTwiceofOthers().dominantIndex(input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
