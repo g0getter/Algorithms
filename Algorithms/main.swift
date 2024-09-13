@@ -61,9 +61,12 @@ import Foundation
 //let result = MoveZeroes().moveZeroes(&input)
 
 /// Sort Array By Parity
-var input = [3,1,2,4]
-let result = SortArrayByParity().sortArrayByParity(input)
+//var input = [3,1,2,4]
+//let result = SortArrayByParity().sortArrayByParity(input)
 
+/// Find Pivot Index
+var input = [1,7,3,6,5,6]
+let result = FindPivotIndex().pivotIndex(input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
