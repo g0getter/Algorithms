@@ -69,8 +69,12 @@ import Foundation
 //let result = FindPivotIndex().pivotIndex(input)
 
 /// Largest Number At Least Twice of Others
-var input = [3,6,1,0]
-let result = LargestNumberAtLeastTwiceofOthers().dominantIndex(input)
+//var input = [3,6,1,0]
+//let result = LargestNumberAtLeastTwiceofOthers().dominantIndex(input)
+
+/// Plus One
+var input = [9]
+let result = PlusOne().plusOne(input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
