@@ -73,8 +73,12 @@ import Foundation
 //let result = LargestNumberAtLeastTwiceofOthers().dominantIndex(input)
 
 /// Plus One
-var input = [9]
-let result = PlusOne().plusOne(input)
+//var input = [9]
+//let result = PlusOne().plusOne(input)
+
+/// Single Number
+var input = [4,1,2,1,2]
+let result = SingleNumber().singleNumber(input)
 print("input: \(input)\nresult: \(result)\n")
 
 protocol Solution {}
