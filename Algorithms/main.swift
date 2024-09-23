@@ -77,8 +77,14 @@ import Foundation
 //let result = PlusOne().plusOne(input)
 
 /// Single Number
-var input = [4,1,2,1,2]
-let result = SingleNumber().singleNumber(input)
-print("input: \(input)\nresult: \(result)\n")
+//var input = [4,1,2,1,2]
+//let result = SingleNumber().singleNumber(input)
+
+/// Rotate Array
+var input = [1,2,3,4,5,6,7]
+let k = 3
+RotateArray().rotate(&input, k)
+
+print("input: \(input)\n")
 
 protocol Solution {}
