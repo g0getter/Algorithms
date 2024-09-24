@@ -1,10 +1,10 @@
 # [level 2] 프로세스 - 42587 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42587) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42587?language=swift) 
 
 ### 성능 요약
 
-메모리: 16.6 MB, 시간: 6.44 ms
+메모리: 16.6 MB, 시간: 4.19 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 09월 24일 17:02:57
+2024년 09월 24일 17:11:06
 
 ### 문제 설명
 
