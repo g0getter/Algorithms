@@ -10,8 +10,6 @@ func solution(_ priorities:[Int], _ location:Int) -> Int {
         
         if isTheMostPriorProcess(currentPriority, among: dynamicPriorities) {
             // Execute
-            
-            // currentOrder += 1
             // if it is it, return
             if dynamicLocation == 0 {
                 return currentOrder
@@ -22,15 +20,10 @@ func solution(_ priorities:[Int], _ location:Int) -> Int {
         } else {
             // append
             dynamicPriorities.append(currentPriority)
-            dynamicLocation = (dynamicLocation + dynamicPriorities.count - 1) % dynamicPriorities.count
+            dynamicLocation = (dynamicLocation + dynamicPriorities.count - 1) % dynamicPriorities.count // index 순환
         }
-        
-        // if the process is executed, return immediately(ABOVE)
-        
-        
-        // dynamicLocation = index(ABOVE)
     }
-    return -1 //currentOrder  // 실행 안될 것
+    return -1 // 실행 안될 것
 }
 
 /// Check if its priority is the biggest (priorities에 priority 포함 X)
