@@ -81,10 +81,13 @@ import Foundation
 //let result = SingleNumber().singleNumber(input)
 
 /// Rotate Array
-var input = [1,2,3,4,5,6,7]
-let k = 3
-RotateArray().rotate(&input, k)
+//var input = [1,2,3,4,5,6,7]
+//let k = 3
+//RotateArray().rotate(&input, k)
 
-print("input: \(input)\n")
+/// Intersection of Two Arrays II
+var nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+let result = IntersectionofTwoArraysII().intersect(nums1, nums2)
+print("nums1: \(nums1)\nnums2: \(nums2)\nresult: \(result)")
 
 protocol Solution {}
