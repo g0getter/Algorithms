@@ -1,6 +1,24 @@
 import Foundation
 
 func solution(_ array:[Int], _ commands:[[Int]]) -> [Int] {
+    // solution1(array, commands)
+    solution2(array, commands)
+}
+
+/// Use `map()`
+func solution2(_ array:[Int], _ commands:[[Int]]) -> [Int] {
+    return commands.map { command in
+        let i = command[0]-1
+        let j = command[1]-1
+        let k = command[2]-1
+                         
+        let sliced = array[i...j].sorted()
+        return sliced[k]
+    }
+}
+
+
+func solution1(_ array:[Int], _ commands:[[Int]]) -> [Int] {
     // 1. Make a subarray
     // 2. Sort - (i) Use built-in sort func or (ii) manually
     // 3. Pick k-th element
