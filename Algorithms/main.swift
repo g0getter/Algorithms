@@ -86,8 +86,12 @@ import Foundation
 //RotateArray().rotate(&input, k)
 
 /// Intersection of Two Arrays II
-var nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-let result = IntersectionofTwoArraysII().intersect(nums1, nums2)
-print("nums1: \(nums1)\nnums2: \(nums2)\nresult: \(result)")
+//var nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+//let result = IntersectionofTwoArraysII().intersect(nums1, nums2)
+//print("nums1: \(nums1)\nnums2: \(nums2)\nresult: \(result)")
+
+var nums = [1, 2, 3, 4, 5, 6]
+let result = MixMerge().mix(nums)
+print("nums: \(nums)\nresult: \(result)")
 
 protocol Solution {}
