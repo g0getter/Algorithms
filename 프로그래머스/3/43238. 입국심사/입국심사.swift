@@ -19,14 +19,8 @@ func solution(_ n:Int, _ times:[Int]) -> Int64 {
             minTime = midTime
         }
         
-        if people == n {
-            if possibleTimes.contains(midTime) {
-                return Int64(possibleTimes.min() ?? -1)
-            } else {
-                possibleTimes.append(midTime)
-            }
-        }
-        
+        // 다 좁혔다면 가능한 경우인 maxTime을 반환(minTime은 불가한 경우임)
+        // (다 좁히기 전까지는 midTime이 계속 바뀜)
         if minTime + 1 == maxTime {
             return Int64(maxTime)
         }
