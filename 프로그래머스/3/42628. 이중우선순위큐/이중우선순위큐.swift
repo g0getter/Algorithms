@@ -7,10 +7,8 @@ func solution(_ operations:[String]) -> [Int] {
     var queue: [Int] = []
     
     for operation in operations {
-        // let action = operation.first ?? Character("")
-        // let value = operation.suffix(from: 2)
-        let action = operation.split(separator: " ").map { String($0) }.first ?? ""
-        let value = operation.split(separator: " ").map { String($0) }.last ?? ""
+        let action = operation.components(separatedBy: " ").first ?? ""
+        let value = operation.components(separatedBy: " ").last ?? ""
         // print(value)
         if action == "I" {
             queue.append(Int(value) ?? 0)

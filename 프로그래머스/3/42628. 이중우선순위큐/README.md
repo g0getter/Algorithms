@@ -1,10 +1,10 @@
 # [level 3] 이중우선순위큐 - 42628 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42628) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42628?language=swift) 
 
 ### 성능 요약
 
-메모리: 21.1 MB, 시간: 2991.59 ms
+메모리: 21.1 MB, 시간: 3228.51 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 10월 17일 20:02:53
+2024년 10월 17일 20:16:26
 
 ### 문제 설명
 
