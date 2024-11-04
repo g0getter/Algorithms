@@ -26,8 +26,6 @@ class Solution {
         /// currentNode to modify
         var currentNode: ListNode? = head.copy() as! ListNode
         
-        // head?.next = nil // 주소값 복사..하네..
-        
         while currentNode != nil {
             var temp = currentNode?.next?.copy() as? ListNode
             currentNode?.next = previousNode?.copy() as? ListNode
