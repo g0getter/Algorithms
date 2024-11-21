@@ -10,6 +10,26 @@
  */
 class Solution {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+        // firstSolution(list1, list2)
+        recursionSolution(list1, list2)
+    }
+}
+
+extension Solution {
+    // reference: https://leetcode.com/problems/merge-two-sorted-lists/solutions/1132854/accepted-solution-for-swift
+    func recursionSolution(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+        guard let list1 = list1, let list2 = list2 else { return list1 ?? list2 } // 둘 중 nil 아닌 것 return
+        
+        if list1.val < list2.val {
+            list1.next = recursionSolution(list1.next, list2)
+            return list1
+        } else {
+            list2.next = recursionSolution(list1, list2.next)
+            return list2
+        }
+
+    }
+    func firstSolution(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         // 1. 첫 번째 listnode끼리 비교, 더 작은 것을 넣고 pointer 옮기기
         // 2. pointer 2개가 null 될 때까지 반복
         var pointer1 = list1
