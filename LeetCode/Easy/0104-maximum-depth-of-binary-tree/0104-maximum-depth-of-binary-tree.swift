@@ -29,7 +29,7 @@ class Solution {
         return max(something(node.left, depth+1), something(node.right, depth+1))
     }
     
-    /// 첫 구상. -> 실패!
+    /// 첫 구상 /// -> 실패!
     // 1. 트리로 구성했을 때 마지막 줄 노드 중 non-nil 있는지 확인
     // 1-1. 마지막에서 n전 줄, ... non-nil 노드 발견할 때까지 반복
     // 2. non-nil 노드 발견했다면 '전체 level' - n이 maximum depth.
@@ -41,31 +41,6 @@ class Solution {
     // 3. 탐색할 queue에 있는 것 빼서 left, right 탐색
     // 4. left, right 탐색할 때 모든 노드를(nil이라도) 탐색할 queue에 삽입
     // -- 탐색할 queue가 빌 때까지 loop 돌기
-//     func maxDepth(_ root: TreeNode?) -> Int {
-//         var searchQueue: [TreeNode?] = [root]
-        
-//         while searchQueue.count > 0 {
-//             // searchQueue 털어먹기
-//             guard let firstNode = searchQueue.first, let node = firstNode else { 
-//                 searchQueue.dropFirst()
-//                 // 남은 게 없는지 점검
-//                 // if searchQueue.compactMap{ $0 }.count == 0 {
-//                 if searchQueue.filter { $0 != nil }.count == 0 {
-//                     searchQueue.removeAll()
-//                     break
-//                 }
-//                 continue
-//             }
-            
-//             searchQueue.append(node.left)
-//             searchQueue.append(node.right)
-//             searchQueue.dropFirst()// or removeFirst()
-//             // print(searchQueue)
-//         }
-//         print(searchQueue)
-        
-//         return 0
-//     }
 }
 
 
