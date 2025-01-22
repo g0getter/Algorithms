@@ -15,6 +15,7 @@ class Solution {
         // 포인터 두 개 - tortoise와 hare 사용.
         // 순환 영역에 들어가면 무조건 만나게 될 수 밖에 없음.
         // <- 둘의 속도가 다르기 때문에. 공배수의 문제가 아니라 거리 차이가 점차 줄어들기 때문에 결국에는 만남.
+        // 만나는 이유: 블로그에 서술함! https://luctor-et-emergo.tistory.com/42
         var tortoise = head // tortoise node
         var hare = head // hare node
         
