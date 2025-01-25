@@ -14,9 +14,8 @@
  * }
  */
 class Solution {
-    // 1. dfs or bfs? bfs. 한 level 탐색할 때마다 자료구조에 새로 담기.
-    // 자료구조 - 큐(fifo 위해)
-    // 왠지 dfs는 재귀일듯
+    // 1. dfs or bfs? bfs
+    // data structure - queue(fifo)
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
         guard let root = root else { return [] }
         
