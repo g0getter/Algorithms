@@ -15,7 +15,7 @@
  */
 class Solution {
     // 1. dfs or bfs? bfs
-    // data structure - queue(fifo)
+    // flatten subnodes of nodes at the same level
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
         guard let root = root else { return [] }
         
