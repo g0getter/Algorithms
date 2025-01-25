@@ -23,9 +23,10 @@ class Solution {
         var result: [[Int]] = [[root.val]]
         var newNodes: [TreeNode] = [root]
         
-        while(newNodes.count > 0) { // TODO: 발전시키기
-            newNodes = getSubnodesOfThese(newNodes)
-            guard newNodes.count > 0 else { return result }
+        while(true) {
+            newNodes = getSubnodes(of: newNodes)
+            guard newNodes.isEmpty == false else { return result }
+            
             let newValues = newNodes.map { $0.val }
             result.append(newValues)
         }
@@ -33,10 +34,10 @@ class Solution {
         return result
     }
     
-    func getSubnodesOfThese(_ nodes: [TreeNode]) -> [TreeNode] {
+    func getSubnodes(of nodes: [TreeNode]) -> [TreeNode] {
         
         let flattenedSubnodes = nodes.flatMap { [$0.left, $0.right] }.compactMap{$0}
-        print(flattenedSubnodes)
+        // print(flattenedSubnodes)
         
         return flattenedSubnodes
     }
