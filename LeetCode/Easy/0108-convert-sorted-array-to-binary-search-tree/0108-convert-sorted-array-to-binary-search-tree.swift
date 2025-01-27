@@ -27,12 +27,9 @@ class Solution {
 
         let midIndex = nums.count / 2 // index of root node
         
-        // let left = TreeNode(~~) // left node
         let left = sortedArrayToBST(Array(nums[0..<midIndex]))
-        // let right = TreeNode(~~~) // right node
-        // let right = sortedArrayToBST(Array(nums[(midIndex+1)...])) // midIndex+1 should not exceed nums.count -> when?? ONLY WHEN the length is less than or equal to 2
         let right = sortedArrayToBST(Array(nums[(midIndex+1)...]))
-        // 가능한 이유는, midIndex+1이 아무리 커봤자 nums.count를 넘지 않기 때문이다.(초과하지 않으면 에러 발생X)
+        // 가능한 이유는, midIndex+1이 아무리 커봤자 nums.count를 넘지 않기 때문.(초과하지 않으면 에러 발생X)
         return TreeNode(nums[midIndex], left, right)
     }
 }
