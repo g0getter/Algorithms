@@ -32,11 +32,7 @@ class Solution {
         // let right = TreeNode(~~~) // right node
         // let right = sortedArrayToBST(Array(nums[(midIndex+1)...])) // midIndex+1 should not exceed nums.count -> when?? ONLY WHEN the length is less than or equal to 2
         let right = sortedArrayToBST(Array(nums[(midIndex+1)...]))
-        // 가능한 이유는, midIndex+1이 아무리 커봤지 nums.count를 넘지 않기 때문이다. 
-
-        print("nums[(<\(midIndex)>+1)..<\(nums.count)]): \(nums[(midIndex+1)..<nums.count]))")
-
-        // print("!!!! 2..<2:\(2..<2)") // (!!!같은 수 ..<같은 수 까지는 에러 안 남. 앞이 커지면 문제지만.)
+        // 가능한 이유는, midIndex+1이 아무리 커봤자 nums.count를 넘지 않기 때문이다.(초과하지 않으면 에러 발생X)
         return TreeNode(nums[midIndex], left, right)
     }
 }
