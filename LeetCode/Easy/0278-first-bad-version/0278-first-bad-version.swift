@@ -4,7 +4,6 @@
  */
 
 class Solution : VersionControl {
-
     // 이진탐색(3) - while 조건 left<right로 설정
     func firstBadVersion(_ n: Int) -> Int {
         var left = 1
@@ -15,14 +14,14 @@ class Solution : VersionControl {
             if isBadVersion(mid) { // search a left half
                 right = mid
             } else { // right half
-                left = mid + 1 // 왜냐면, F~F는 탐색할 구간이 아님. ()
+                left = mid + 1 // 설령 left가 T 구간이 되어도 그 다음에는 한 번 더 F 됨. -> 결국 +1 했을 때 left, right 같아지는 시점이 도래함.
             }
         }
         
-        return right
+        return right // left == right
     }
 
-    // 이진탐색(2) - 마지막에 left, right T/F 비교 조건문 생략
+    // [개인적으로 가장 선호!]이진탐색(2) - 마지막에 left, right T/F 비교 조건문 생략
     // - 처음부터 T인 것만 아니라면 left는 항상 F, right는 항상 T인 값이므로.
     // (왜냐면 애초부터 로직이 mid가 T인지 F인지에 따라 mid를 right 혹은 left로 바꾸는 것이므로)
     func firstBadVersion_2(_ n: Int) -> Int {
@@ -40,7 +39,7 @@ class Solution : VersionControl {
             }
         }
         
-        return right
+        return right // left == right
     }
     
     // 이진탐색(1) - mid, oldMid가 아니라 left, right로 시도
