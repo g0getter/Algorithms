@@ -1,5 +1,6 @@
 class Solution {
-    func climbStairs_new(_ n: Int) -> Int {
+    // my solution: use a queue
+    func climbStairs(_ n: Int) -> Int {
         // W(n+2) = W(n) + W(n+1) (n>=1)
         guard n != 1 else { return 1 }
         guard n != 2 else { return 2 }
@@ -17,8 +18,9 @@ class Solution {
         return stepQueue.last ?? -1
     }
 
-    // wasting memory version
-    func climbStairs(_ n: Int) -> Int {
+    // another solution: simple but wasting memory 
+    // (but don't know why memory is the same with the above as 19.76MB)
+    func climbStairs_sol2(_ n: Int) -> Int {
         // W(n+2) = W(n) + W(n+1) (n>=1)
         guard n != 1 else { return 1 }
         guard n != 2 else { return 2 }
@@ -28,7 +30,7 @@ class Solution {
         steps[0] = -1 // not used
         steps[1] = 1
         steps[2] = 2
-        
+
         for level in 3...n {
             steps[level] = steps[level-2] + steps[level-1]
         }
