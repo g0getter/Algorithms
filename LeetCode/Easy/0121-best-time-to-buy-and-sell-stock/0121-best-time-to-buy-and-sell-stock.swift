@@ -26,11 +26,6 @@ class Solution {
 
     // Another version with Kadane's Algorithm, not using P array but maxSubSoFar(maxP)
     func maxProfit_maxSubSoFar(_ prices: [Int]) -> Int {
-        // S: subtraction array of `prices`.
-        // S[i] = prices[i] - prices[i-1] (i>=1)
-        // -> S의 연속된 부분합 중 최대가 정답. -> S에 대해 Kadane's Algorithm
-        // -> `P[i]: S[i]의 연속된 부분합 중 최댓값(단, 반드시 S[i]는 포함)` 이라고 했을 때, 이 문제의 정답은 P 중 최댓값.
-        // P[i] = max(P[i-1]+S[i], S[i]).
         // 개선: P 배열 대신 현재까지의 max인 p 사용
 
         // S 구하기
@@ -39,14 +34,11 @@ class Solution {
             subtractions.append(prices[i]-prices[i-1])
         }
 
-        print(subtractions)
-
         // P 구하기(i단계의 maxSub가 P[i]임)
         var maxSub = 0
         // 현재까지의 max인 
         var maxSubSoFar = 0
         for i in 1..<subtractions.count {
-            // print("i: \(i), maxP=max(\(maxP+subtractions[i]), \(subtractions[i]))")
             maxSub = max(maxSub+subtractions[i], subtractions[i]) // 초기화하거나, 이전의 최대에 자신을 더하거나
             maxSubSoFar = max(maxSub, maxSubSoFar) // Kadane's Algorithm과는 별개로 이 문제를 위한 단계
         }
