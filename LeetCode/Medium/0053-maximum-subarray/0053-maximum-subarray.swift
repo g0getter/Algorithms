@@ -1,6 +1,6 @@
 class Solution {
     // Solution(2)
-    // not to use .max() at the end
+    // not to use .max() at the end (which consumes more time than Solution(1))
     func maxSubArray(_ nums: [Int]) -> Int {
         var maxSubs = [nums[0]] // S
         var maxSubSoFar = nums[0]
