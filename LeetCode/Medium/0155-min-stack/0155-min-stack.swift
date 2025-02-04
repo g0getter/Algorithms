@@ -1,5 +1,45 @@
-
+// Solution(Hint+Discuss) using a node in the stack having a minimum value.
 class MinStack {
+    private var node: Node?
+
+    class Node { // cannot be struct due to a recursive issue
+        var val: Int
+        var next: Node?
+        var min: Int // minimum so far, including a current node itself
+
+        init(val: Int, next: Node?, min: Int) {
+            self.val = val
+            self.next = next
+            self.min = min
+        }
+    }
+
+    init() {
+    }
+    
+    func push(_ val: Int) {
+        let previousNode = node
+        let previousMin = previousNode?.min ?? Int.max
+        node = Node(val: val, next: previousNode, min: (previousMin > val ? val : previousMin))
+    }
+    
+    func pop() {
+        guard let previousNode = node else { return }
+        node = previousNode.next
+    }
+    
+    func top() -> Int {
+        guard let node = node else { return Int.max }
+        return node.val
+    }
+    
+    func getMin() -> Int {
+        return node?.min ?? -1
+    }
+}
+
+// My solution not using a node
+class MinStack_solution1 {
     private var stack: [Int]
     private var minimum = Int.max
     
