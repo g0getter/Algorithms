@@ -1,5 +1,29 @@
-// Solution(Hint+Discuss) using a node in the stack having a minimum value.
+// Solution(Hint+Discuss/Swift) using a Tuple in the stack having a minimum value.
 class MinStack {
+    private var stack: [(val: Int, min: Int)] = []
+
+    init() {
+    }
+    
+    func push(_ val: Int) {
+        let lastMin = stack.last?.min ?? Int.max
+        stack.append((val: val, min: lastMin > val ? val : lastMin))
+    }
+    
+    func pop() {
+        stack.removeLast()
+    }
+    
+    func top() -> Int {
+        stack.last?.val ?? Int.max
+    }
+    
+    func getMin() -> Int {
+        stack.last?.min ?? Int.max
+    }
+}
+// Solution(Hint+Discuss) using a node having a minimum value.
+class MinStack_Node {
     private var node: Node?
 
     class Node { // cannot be struct due to a recursive issue
