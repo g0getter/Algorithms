@@ -90,8 +90,26 @@ import Foundation
 //let result = IntersectionofTwoArraysII().intersect(nums1, nums2)
 //print("nums1: \(nums1)\nnums2: \(nums2)\nresult: \(result)")
 
-var nums = [1, 2, 3, 4, 5, 6]
-let result = MixMerge().mix(nums)
-print("nums: \(nums)\nresult: \(result)")
+
+var input = """
+15
+push 1
+push 2
+front
+back
+size
+empty
+pop
+pop
+pop
+size
+empty
+pop
+push 3
+empty
+front
+"""
+let result = Queue().solution(input)
+print("solution: \(result)")
 
 protocol Solution {}
