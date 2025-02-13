@@ -6,24 +6,15 @@ def solution(scoville, K):
     heapq.heapify(scoville) # scoville: mutable!!
     
     minValue = scoville[0]
-    
     if minValue >= K:
         return answer
     
     while minValue < K and len(scoville) > 1:
-        # firstMin = min(scoville)
-        # scoville.remove(firstMin)
         firstMin = heapq.heappop(scoville)
-        
-        # secondMin = min(scoville)
-        # scoville.remove(secondMin)
         secondMin = heapq.heappop(scoville)
         
-        newValue = firstMin + secondMin * 2
-        # scoville.append(newValue)
-        heapq.heappush(scoville, newValue)
+        heapq.heappush(scoville, firstMin + secondMin * 2)
         
-        # minValue = heapq.heappop(scoville)
         minValue = scoville[0]
         answer += 1
         
