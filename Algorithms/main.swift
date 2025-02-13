@@ -90,26 +90,21 @@ import Foundation
 //let result = IntersectionofTwoArraysII().intersect(nums1, nums2)
 //print("nums1: \(nums1)\nnums2: \(nums2)\nresult: \(result)")
 
-
 var input = """
-15
-push 1
-push 2
-front
-back
-size
-empty
-pop
-pop
-pop
-size
-empty
-pop
-push 3
-empty
-front
+So when I die (the [first] I will see in (heaven) is a score list).
+[ first in ] ( first out ).
+Half Moon tonight (At least it is better than no Moon at all].
+A rope may form )( a trail in a maze.
+Help( I[m being held prisoner in a fortune cookie factory)].
+([ (([( [ ] ) ( ) (( ))] )) ]).
+ .
+.
 """
-let result = Queue().solution(input)
-print("solution: \(result)")
+
+/*let result = */BalancedWorld().solution(input)
+//print("\(result)")
+
+// For BOJ submission
+//BalancedWorld().solution()
 
 protocol Solution {}
