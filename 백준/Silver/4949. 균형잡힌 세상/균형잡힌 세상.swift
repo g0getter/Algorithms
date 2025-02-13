@@ -1,27 +1,19 @@
 class BalancedWorld {
-    
-    // FOR SUBMITION
+
+
     func solution() {
         // 0. Get a line
         // 입력값을 줄 단위로 분리하여 배열로 저장
         while let line = readLine(), line != "." {
             print(determineBalance(line) ? "yes" : "no")
         }
-        
-//        for line in lines {
-//            print(determineBalance(line) ? "yes" : "no")
-//        }
-        
-        // 1. Explore each character
-        // 2. when you meet ")" or "]", pop the stack
-        // 3. if there's nothing to pop, print false
-        // 4. if all are explored and stacks are empty, return true
-        
     }
     
+    // 1. Explore each character
+    // 2. when you meet ")" or "]", pop the stack
+    // 3. if there's nothing to pop, print false
+    // 4. if all are explored and stacks are empty, return true
     private func determineBalance(_ sentence: String) -> Bool {
-//        print(sentence)
-        
         var parenStack = Stack<Int>()
         var bracketStack = Stack<Int>()
         var order = 0
