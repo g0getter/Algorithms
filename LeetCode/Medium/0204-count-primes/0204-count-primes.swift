@@ -1,6 +1,30 @@
 class Solution {
-    // Excludes (Eratosthenes)
+    // Eratosthenes, not using removeAll, using a Bool array
     func countPrimes(_ n: Int) -> Int {
+        guard n > 2 else { return 0 }
+        var isPrimes = Array(repeating: true, count: n) // to exclude isPrimes[n]
+        var primeCount = 0
+
+        // switch to FALSE
+        for i in 2..<isPrimes.count {
+            guard isPrimes[i] else { 
+                continue 
+            }
+            primeCount += 1
+
+            // 배수 삭제
+            var j=2 // to exclude i itself
+            while (i*j<n) {
+                isPrimes[i*j] = false
+                j+=1
+            }
+        }
+
+        return primeCount
+    }
+
+    // Excludes (Eratosthenes) - 2795ms
+    func countPrimes_mine(_ n: Int) -> Int {
         // 2부터 시작, 2 배수 전부 제외
         // 그 다음 수 N부터 시작, N 배수 전부 제외
         // -> root N까지 가면 끝
