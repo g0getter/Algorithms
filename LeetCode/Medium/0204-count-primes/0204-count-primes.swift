@@ -1,5 +1,5 @@
 class Solution {
-    // Eratosthenes, not using removeAll, using a Bool array
+    // Solution 3: Eratosthenes, not using removeAll, using a Bool array
     // 배열을 직접 수정하는 것이 새로운 배열을 생성하는 것(countPrimes_usingRemoveAll)보다 훨씬 효율적
     func countPrimes(_ n: Int) -> Int {
         guard n > 2 else { return 0 }
@@ -22,7 +22,7 @@ class Solution {
         return primeCount
     }
 
-    // Excludes (Eratosthenes) - 2795ms
+    // Solution 2: Excludes (Eratosthenes) - 2795ms
     // Time complexity: O(n*root n) because of removeAll(O(n))
     func countPrimes_usingRemoveAll(_ n: Int) -> Int {
         // 2부터 시작, 2 배수 전부 제외
@@ -45,7 +45,7 @@ class Solution {
         return mutableList.count
     }
     
-    // Runtime : SO LONG (3650ms)
+    // Solution 1: Runtime SO LONG (3650ms)
     func countPrimes_checkAll(_ n: Int) -> Int {
         var primesCount = 0
         
