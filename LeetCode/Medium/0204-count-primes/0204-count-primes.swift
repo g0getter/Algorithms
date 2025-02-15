@@ -20,34 +20,34 @@ class Solution {
         return mutableList.count
     }
     
-    // Runtime : SO LONG
-    // func countPrimes_checkAll(_ n: Int) -> Int {
-    //     var primesCount = 0
+    // Runtime : SO LONG (3650ms)
+    func countPrimes_checkAll(_ n: Int) -> Int {
+        var primesCount = 0
         
-    //     guard n > 2 else { return 0 }
+        guard n > 2 else { return 0 }
         
-    //     for num in 2..<n {
-    //         if isPrime(num) {
-    //             primesCount += 1
-    //         }
-    //     }
+        for num in 2..<n {
+            if isPrime(num) {
+                primesCount += 1
+            }
+        }
         
-    //     return primesCount
-    // }
+        return primesCount
+    }
     
-    // // n > 2
-    // private func isPrime(_ n: Int) -> Bool {
-    //     guard n >= 4 else { return true }
-    //     let rootN = Double(n).squareRoot()
-    //     let intRootN = floor(rootN)
+    // n > 2
+    private func isPrime(_ n: Int) -> Bool {
+        guard n >= 4 else { return true }
+        let rootN = Double(n).squareRoot()
+        let intRootN = floor(rootN)
         
-    //     // 소인수가 존재하면 return false
-    //     for num in 2...Int(intRootN) {
-    //         if n % num == 0 {
-    //             return false
-    //         }
-    //     }
+        // 소인수가 존재하면 return false
+        for num in 2...Int(intRootN) {
+            if n % num == 0 {
+                return false
+            }
+        }
         
-    //     return true
-    // }
+        return true
+    }
 }
