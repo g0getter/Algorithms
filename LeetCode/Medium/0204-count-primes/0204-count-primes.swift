@@ -1,5 +1,34 @@
 class Solution {
+    // Excludes (Eratosthenes)
     func countPrimes(_ n: Int) -> Int {
+        // 2부터 시작, 2 배수 전부 제외
+        // 그 다음 수 N부터 시작, N 배수 전부 제외
+        // -> 끝까지 가면 끝
+        
+        guard n > 2 else { return 0 }
+        guard n != 3 else { return 1 }
+        
+        let rootN = Double(n).squareRoot()
+        let intRootN = Int(floor(rootN))
+        var mutableList = Array(2..<n)
+        
+        for num in 2...intRootN {
+            guard mutableList.contains(num) else { continue }
+            // print(num)
+            mutableList.removeAll { $0 % num == 0 && $0 != num }
+            // print(mutableList)
+        }
+        // for num in 2...intRootN {
+        //     // print(num)
+        //     mutableList.removeAll { $0 % num == 0 && $0 != num }
+        //     // print(mutableList)
+        // }
+        
+        return mutableList.count
+    }
+    
+    // Runtime : SO LONG
+    func countPrimes_checkAll(_ n: Int) -> Int {
         var primesCount = 0
         
         guard n > 2 else { return 0 }
