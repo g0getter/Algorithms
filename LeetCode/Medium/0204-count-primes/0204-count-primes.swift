@@ -1,5 +1,6 @@
 class Solution {
     // Solution 3: Eratosthenes, not using removeAll, using a Bool array
+    // Time Complexity:  O(n log(log n))
     // 배열을 직접 수정하는 것이 새로운 배열을 생성하는 것(countPrimes_usingRemoveAll)보다 훨씬 효율적
     func countPrimes(_ n: Int) -> Int {
         guard n > 2 else { return 0 }
@@ -13,7 +14,7 @@ class Solution {
 
             // 배수 삭제
             var multiple = i * 2 // start from 2 to exclude i itself
-            while (multiple < n) {
+            while (multiple < n) { // time complexity: O(n*log(log(n)))으로 수렴
                 isPrimes[multiple] = false
                 multiple += i
             }
