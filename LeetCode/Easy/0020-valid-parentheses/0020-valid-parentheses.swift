@@ -12,9 +12,14 @@ class Solution {
                 parenStack.append("}")
             } else if paren == "[" {
                 parenStack.append("]")
-            } else if parenStack.popLast() != paren { // closing parenthesis
+            } else if parenStack.popLast() == paren { // closing parenthesis
+                continue
+            } else {
                 return false
             }
+            // } else if parenStack.popLast() != paren { // closing parenthesis
+            //     return false
+            // }
         }
         
         return parenStack.isEmpty
