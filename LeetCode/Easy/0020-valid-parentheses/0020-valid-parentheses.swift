@@ -5,41 +5,24 @@ class Solution {
         var parenStack: [Character] = []
         
         for paren in s {
-            if ["(", "{", "["].contains(paren) {
-                parenStack.append(paren)
+            // if ["(", "{", "["].contains(paren) {
+            //     parenStack.append(paren)
+            if paren == "(" {
+                parenStack.append(")")
+            } else if paren == "{" {
+                parenStack.append("}")
+            } else if paren == "[" {
+                parenStack.append("]")
             } else {
-                guard let last = parenStack.popLast() else { return false }
+                // guard let last = parenStack.popLast() else { return false }
                 
-                if last == "(", paren == ")" {
-                    continue
-                } else if last == "{", paren == "}" {
-                    continue
-                } else if last == "[", paren == "]" {
-                    continue
-                } else {
+                if parenStack.popLast() != paren {
                     return false
                 }
             }
         }
         
         return parenStack.isEmpty
-        
-    // overhead?
-//     enum BracketType {
-//         case round
-//         case curly
-//         case square
-        
-//         var opening: String? {
-//             switch self {
-//                 case .round: "("
-//                 case .curly: "{"
-//                 case .square: "["
-//                 default: nil
-//             }
-//         }
-        
-        
     }
     
 }
