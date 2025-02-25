@@ -1,6 +1,5 @@
 import sys
 
-# input = "xabba"#"abcba"
 # 0: 회문
 # 1: 유사회문
 # 2: 아님
@@ -16,21 +15,9 @@ def is_palindrome_two_independent_pointer(string):
             check1 = is_pure_palindrome(string, leftPointer + 1, rightPointer)
             check2 = is_pure_palindrome(string, leftPointer, rightPointer - 1)
             return 1 if check1 or check2 else 2
-            # if canBeDeleted:
-            #     if string[leftPointer+1] == string[rightPointer]:
-            #         canBeDeleted = False
-            #         leftPointer += 1
-            #     elif string[leftPointer] == string[rightPointer-1]:
-            #         canBeDeleted = False
-            #         rightPointer -= 1
-            #     else:
-            #         return 2
-            # else:
-            #     return 2
         leftPointer += 1
         rightPointer -= 1
 
-    # return 0 if canBeDeleted else 1
     return 0
 
 def is_pure_palindrome(s, left, right):
@@ -51,7 +38,3 @@ results = [str(is_palindrome_two_independent_pointer(string)) for string in inpu
 print("\n".join(results))
 # for result in results:
 #     print(result)
-
-# test_cases = ["aba", "abca", "abcba", "abecbea", "deeee", "racecar", "hello", "madam"]
-# for s in test_cases:
-#     print(s, "->", is_palindrome_two_independent_pointer(s))
