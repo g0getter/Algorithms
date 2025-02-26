@@ -15,8 +15,8 @@ class Solution(object):
         while l1 != None or l2 != None or carry != 0:
             # value = (carry + l1.val + l2.val) % 10
             # carry = (carry + l1.val + l2.val) // 10
-            val1 = l1.val if l1 is not None else 0
-            val2 = l2.val if l2 is not None else 0
+            val1 = l1.val if l1 else 0
+            val2 = l2.val if l2 else 0
             
             total = val1 + val2 + carry
             value = total % 10
@@ -31,8 +31,8 @@ class Solution(object):
 
             previousNode = currentNode # 헷갈림. 값 복사인지 레퍼런스 복사인지
             
-            l1 = l1.next if l1 is not None else None
-            l2 = l2.next if l2 is not None else None
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
 
         return head
         
