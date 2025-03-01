@@ -9,7 +9,6 @@ def stack_sequence(sequence):
     result = []
 
     for num in sequence:
-        # print("num:", num)
         if num_to_add_next <= num:
             while num_to_add_next <= num:
                 stack.append(num_to_add_next)
@@ -20,28 +19,22 @@ def stack_sequence(sequence):
             result.append("-")
         else:
             # pop 해서 같은지 확인
-            # if len(stack) > 0 and stack.pop() == num:
-            #     # result += "-"
-            #     result.append("-")
-            #     continue
-            # else:
-            #     return ["NO"]
-            if stack and stack[-1] == num:
-                stack.pop()
+            # if stack and stack[-1] == num:
+            #     stack.pop()
+            if len(stack) > 0 and stack.pop() == num:
                 result.append("-")
+                continue
             else:
                 return ["NO"]
-        # print(stack, result)
 
     # true - return +, - sequence splited by \n
     return result
-
-
 
 # n = 8
 # sequence = [4, 3, 6, 8, 7, 5, 2, 1]
 # sequence = [1,2,5,3,4]
 # print(stack_sequence(sequence))
+
 # 백준 입출력 처리
 n = int(sys.stdin.readline().strip())  # 수열의 길이
 sequence = [int(sys.stdin.readline().strip()) for _ in range(n)]  # 입력 받은 수열 리스트
