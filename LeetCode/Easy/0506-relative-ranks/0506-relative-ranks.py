@@ -8,24 +8,25 @@ class Solution:
         score_sorted = sorted(score, reverse=True)
 
         # 2
-        dict = {}
-        for i in range(len(score_sorted)):
-            result = ""
-            if i == 0:
-                result = "Gold Medal"
-            elif i == 1:
-                result = "Silver Medal"
-            elif i == 2:
-                result = "Bronze Medal"
-            else:
-                result = f"{i + 1}"
+        medals = ["Gold Medal", "Silver Medal", "Bronze Medal"]
+        rank_mapping = {score: medals[i] if i < 3 else str(i + 1) for i, score in enumerate(score_sorted)}
 
-            dict[score_sorted[i]] = result
+        # dict = {} 
+        # for i in range(len(score_sorted)):
+        #     result = ""
+        #     if i < 3:
+        #         result = medals[i]
+        #     else:
+        #         result = f"{i + 1}"
 
-        result = []
+        #     dict[score_sorted[i]] = result
+
+        # result = []
 
         # 3
-        for s in score:
-            result.append(dict[s])
+        return [rank_mapping[score] for score in score]
 
-        return result
+        # for s in score:
+        #     result.append(dict[s])
+
+        # return result
