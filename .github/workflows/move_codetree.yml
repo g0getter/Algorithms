@@ -40,7 +40,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git  # PAT 사용
           git add .
           git commit -m "Move Codetree files to Codetree folder"
           git push
