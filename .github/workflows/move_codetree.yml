@@ -3,6 +3,7 @@ name: Move Codetree Files
 on:
   schedule:
     - cron: "0 9 * * *"  # 매일 한국 시간(KST) 18:00 (UTC 09:00)
+  workflow_dispatch:  # 수동 실행 버튼 활성화
 
 jobs:
   move-codetree-files:
