@@ -29,7 +29,14 @@ jobs:
           MOVED=false
           for dir in [0-9][0-9][0-9][0-9][0-9][0-9]*; do
             if [ -d "$dir" ]; then
-              mv "$dir" Codetree/
+              target_dir="Codetree/$dir"
+              if [ -d "$target_dir" ]; then
+                # 디렉토리가 이미 존재하면 그 안으로 이동
+                mv "$dir"/* "$target_dir/"
+              else
+                # 디렉토리가 존재하지 않으면 Codetree로 이동
+                mv "$dir" Codetree/
+              fi
               MOVED=true
             fi
           done
