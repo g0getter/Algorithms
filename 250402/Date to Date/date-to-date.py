@@ -1,15 +1,19 @@
 m1, d1, m2, d2 = map(int, input().split())
 
 # Please write your code here.
-days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+if m1 == m2 and d1 == d2:
+    print(1)
+else:
 
-days_remaining = days[m1]-d1 + 1
+    days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-count = days_remaining
+    days_remaining = days[m1]-d1 + 1
 
-for month in range(m1+1, m2):
-    count += days[month]
+    count = days_remaining # m1의 days
 
-count += d2
+    for month in range(m1+1, m2):
+        count += days[month] # m1과 m2 사이의 days
 
-print(count)
+    count += d2 # m2의 days
+
+    print(count)
