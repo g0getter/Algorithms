@@ -1,9 +1,9 @@
 m1, d1, m2, d2 = map(int, input().split())
 
 # Please write your code here.
-if m1 == m2 and d1 == d2:
-    print(1)
-else:
+if m1 == m2:
+    print(d2-d1+1)
+else: # 월이 다를 경우
 
     days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
