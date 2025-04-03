@@ -7,9 +7,10 @@ a, b, c = map(int, input().split())
 def getMinutesOnNovember(day, hour, minute):
     return (day-1) * 24 * 60 +  hour * 60 + minute
 
-if a == 11 and b <= 11 and c < 11:
+if a == 11 and (b < 11 or b == 11 and c < 11):
     print(-1)
-print(getMinutesOnNovember(a, b, c) - getMinutesOnNovember(11, 11, 11))
+else:
+    print(getMinutesOnNovember(a, b, c) - getMinutesOnNovember(11, 11, 11))
 
 # [X] 필요 이상으로 로직이 들어간 함수 
 # def getMinutes(month, day, hour, minute):
