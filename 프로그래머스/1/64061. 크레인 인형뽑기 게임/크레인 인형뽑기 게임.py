@@ -1,30 +1,21 @@
-from collections import deque
-
+# 수업 답안 #
+# queue로 재구성하지 않고 있는 배열 그대로 활용
+# 간결하고 빠르게
 def solution(board, moves):
     bucket = []
-    num_removed = 0
+    answer = 0
 
-    # board -> queue N개로 변환
-    queues = []
-    for j in range(len(board[0])):
-        queue = deque()
-        for i in range(len(board)):
-            if board[i][j] == 0: continue
-            queue.append(board[i][j])
-        queues.append(queue)
-
-
-    # moves 돌면서 해당 큐 popLeft, 바구니 stack peek()(=last)과 같으면 바구니 pop, 다르면 바구니에 append
     for move in moves:
-        queue_num = move - 1
-        if not queues[queue_num]: # 비었으면 다음 move로 넘어감(예외 먼저 처리)
-            continue
+        index = move - 1
+        for row in board:
+            if row[index] != 0: # 유의미
+                bucket.append(row[index]) # 넣고
+                row[index] = 0 # 빼고
+                break
 
-        picked_doll = queues[queue_num].popleft()
-        if bucket and bucket[-1] == picked_doll: # bucket의 가장 마지막 인형과 비교
-            bucket.pop()
-            num_removed += 2
-        else: # 다르거나 bucket 비었으면
-            bucket.append(picked_doll)
-
-    return num_removed
+        # bucket 검사
+        if len(bucket) >= 2 and bucket[-2] == bucket[-1]:
+            bucket = bucket[:-2]
+            answer += 2
+            
+    return answer
