@@ -8,7 +8,7 @@ def count_coins(r, c):
         return -1
 
     for i in range(r, r+3):
-        for j in range(r, r+3):
+        for j in range(c, c+3):
             if grid[i][j] == 1: count += 1
 
     return count
