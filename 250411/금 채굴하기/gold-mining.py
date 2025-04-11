@@ -52,7 +52,7 @@ def calculate_cost(k):
 # print(count_gold(2, 3, 1))
 max_gold_count = 0
 
-for k in range(n): # 0 ~ n-1
+for k in range(2*n): # 0 ~ n-1 말고 2n까지(?!)
     for i in range(n):
         for j in range(n):
             gold_count = count_gold(i, j, k)
