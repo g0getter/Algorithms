@@ -2,6 +2,8 @@ n = int(input())
 A = list(map(int, input().split()))
 
 # Please write your code here.
+import sys
+
 def get_distance(k, house):
     sum = 0
     for i, house in enumerate(A):
@@ -9,7 +11,7 @@ def get_distance(k, house):
     
     return sum
 
-min_distance = 100*100 # TODO: 최댓값 지정
+min_distance = sys.maxsize
 for i, house in enumerate(A):
     distance = get_distance(i, house)
     min_distance = min(min_distance, distance)
