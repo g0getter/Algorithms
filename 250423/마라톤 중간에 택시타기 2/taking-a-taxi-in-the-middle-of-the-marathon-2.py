@@ -11,7 +11,7 @@ def get_min_distance():
     # 제외할 것 선택
     for i in range(1,len(points)-1): # i번째를 제외
         current_distance = 0
-        new_indices = list(range(i)) + list(range(i+1,len(points)))
+        # new_indices = list(range(i)) + list(range(i+1,len(points)))
         
         # 거리 계산
         for j in range(len(new_indices)-1):
