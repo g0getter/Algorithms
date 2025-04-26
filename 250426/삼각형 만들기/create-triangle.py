@@ -1,12 +1,11 @@
 n = int(input())
 points = [tuple(map(int, input().split())) for _ in range(n)]
-x = [p[0] for p in points]
-y = [p[1] for p in points]
 
 # 1. 3개 pick
 # 2. x 2개 같 & y 2개 같 -> max_area 업데이트
 max_area = 0
 def are_two_out_of_three_same(list):
+    if len(list) != 3: return False # 확실한 보장 위해 추가
     return len(set(list)) == 2
 
 for i in range(n):
