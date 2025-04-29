@@ -6,9 +6,9 @@ max_work = 0
 for temp in range(1000+1): # or max(Tb)
     work = 0
     for a, b in ranges:
-        if temp in range(a):
+        if temp < a:
             work += C
-        elif temp in range(a, b+1):
+        elif temp <= b:
             work += G
         else: # temp > b
             work += H
