@@ -32,6 +32,8 @@ def get_student_i_with_most_expensive_price(student100_i_list):
 def get_max_student_count(student50_i, student100_i_list):
     if is_available(student50_i, student100_i_list):
         return len(student100_i_list) + 1# len(student50_i)
+    elif len(student100_i_list) == 0: # 50짜리만 넣어도 비용 충당 불가하다면
+        return 0
     else:
         # student_count -= 1
         student_i_to_exclude = get_student_i_with_most_expensive_price(student100_i_list)
