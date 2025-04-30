@@ -15,13 +15,19 @@ def score(removed_idx):
     # 인접해야하는데 i+1, i를 냅다 쓸 순 없음(removed_idx 걸러야 하므로)
     # -> 다음 것 매번 removed_idx와 같은지 확인하는 것도 별로..
     # ----> 이전 변수를 prev로 두고 비교해보기
+    ### prev = None(혹은 -1)로 초기화 or 첫 번째 유효한 값으로 초기화
+    # -> 모두 가능하나, 더 깔끔, 안전, 헷갈리지 않게 하는 건 None(혹은 -1) 쓰는 것.
+    # ('첫 번째 유효한 값'은 모호함.)
     distance_sum = 0
 
-    prev_idx = 0 if removed_idx != 0 else 1
-    for i in range(1, n):
-        if i != removed_idx:
+    prev_idx = -1
+    for i in range(n):
+        if i == removed_idx:
+            continue
+            
+        if prev_idx != -1:
             distance_sum += abs(arr[i]-arr[prev_idx])
-            prev_idx = i
+        prev_idx = i
     
     return distance_sum
 
