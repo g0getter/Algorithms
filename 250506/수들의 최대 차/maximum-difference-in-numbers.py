@@ -11,9 +11,9 @@ for min_num in sorted_arr:
     for num in sorted_arr:
         if min_num <= num <= min_num + k:
             count += 1
-        else:
-            break # sorted라 뒤는 볼 이유 없음
-    
+        elif num > min_num + k:
+            break # sorted라 뒤는 볼 이유 없음 -> X(왜냐면 작은 수가 나올 수도 있음)
+    # print(min_num, "->", count)
     max_count = max(max_count, count)
 
 print(max_count)
