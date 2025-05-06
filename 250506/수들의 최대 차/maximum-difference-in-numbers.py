@@ -27,15 +27,15 @@ print(max_count)
 # O(K*N) (=O(10000 * 1000)) 
 # - 최악의 경우는 별로지만, K가 작아지고 N이 커질 경우 1보다 더 빠른 풀이.
 
-max_count = 0
-for min_num in range(1, k+1):
-    # min_num ~ min_num + k 구간 내 원소 개수 세기
-    count = 0
-    for num in arr:
-        if min_num <= num <= min_num + k:
-            count += 1
+# max_count = 0
+# for min_num in range(1, k+1):
+#     # min_num ~ min_num + k 구간 내 원소 개수 세기
+#     count = 0
+#     for num in arr:
+#         if min_num <= num <= min_num + k:
+#             count += 1
 
-    max_count = max(max_count, count)
+#     max_count = max(max_count, count)
 
-print(max_count)
+# print(max_count)
 
