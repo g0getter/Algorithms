@@ -21,7 +21,7 @@ def is_max_possible(max_num):
     return True
 
 def solution():
-    for max_num in range(2, n+1): # TODO: 더 좋은 방법 확인!
+    for max_num in range(min(arr), max(arr)+1): # TODO: 더 좋은 방법 확인!
 
         # available_indices가 가능한지 검증
         if is_max_possible(max_num):
