@@ -33,7 +33,7 @@ def print_coordinate(arr):
     for i in arr:
         print(i)
 
-OFFSET = 10
+OFFSET = 1000
 MAX_R = OFFSET * 2
 coordinate = [ [0] * (MAX_R+1) for _ in range(MAX_R+1) ]
 
@@ -42,13 +42,13 @@ for i, (x1, y1, x2, y2) in enumerate(rects):
     x1, y1 = x1 + OFFSET, y1 + OFFSET
     x2, y2 = x2 + OFFSET, y2 + OFFSET
 
-    # content = 1 if (i == 0 or i == 1) else 0
+    content = 1 if (i == 0 or i == 1) else 0
 
     # 2. 1로 채우기 & 3. 0으로 비우기 (순서/위치 따라)
     for x in range(x1, x2):
         for y in range(y1, y2):
-            # coordinate[x][y] = content # 1, 2, 3을 차례로 채움
-            coordinate[x][y] = i+1
+            coordinate[x][y] = content # 1, 2, 3을 차례로 채움
+            # coordinate[x][y] = i+1
             
 # 4. 1인 개수 세기
-# print(count_one(coordinate))
+print(count_one(coordinate))
