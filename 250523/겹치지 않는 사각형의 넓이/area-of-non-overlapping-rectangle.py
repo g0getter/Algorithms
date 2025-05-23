@@ -7,7 +7,7 @@
 # x1[1], y1[1], x2[1], y2[1] = map(int, input().split())
 # x1[2], y1[2], x2[2], y2[2] = map(int, input().split())
 
-# tuple 형태의 배열로 받기
+# ❗️tuple 형태의 배열로 받기
 n = 3
 rects = [
     tuple(map(int, input().split())) # 위의 것 대신!!
@@ -22,9 +22,9 @@ rects = [
 
 def count_one(arr):
     area = 0
-    for i in range(len(arr[0])):
-        for j in range(len(arr)):
-            if arr[i][j]: # TODO: i, j 순서
+    for i in range(len(arr)):
+        for j in range(len(arr[0])):
+            if arr[i][j]: # ❗️ i, j 순서 주의
                 area += 1
     
     return area
@@ -48,7 +48,6 @@ for i, (x1, y1, x2, y2) in enumerate(rects):
     for x in range(x1, x2):
         for y in range(y1, y2):
             coordinate[x][y] = content # 1, 2, 3을 차례로 채움
-            # coordinate[x][y] = i+1
             
 # 4. 1인 개수 세기
 print(count_one(coordinate))
