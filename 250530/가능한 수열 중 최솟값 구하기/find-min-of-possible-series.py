@@ -8,8 +8,9 @@ def backtracking(sequence):
     for i in ['4','5','6']:
         if not adjacent_consecutive(sequence + i):
             result = backtracking(sequence + i)
-            if result:
+            if result: # 바로 끝내야 가장 작은 수를 찾은 것이고, 더 시도하지 않음
                 return result
+            # 다음 숫자 붙이기 진행(코드 불필요)
     
 # 인접한 연속 부분 수열이 동일한지 여부 반환
 def adjacent_consecutive(sequence):
