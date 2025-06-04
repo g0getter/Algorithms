@@ -8,10 +8,11 @@ max_sum = -1000
 
 current_sum = 0
 for num in a:
-    if current_sum + num < 0:
-        current_sum = num # 전부 음수인 경우도 확인
-    else:
-        current_sum += num
+    current_sum = max(current_sum + num, num) # 직전 최대 부분합을 연장 or 본인으로 초기화
+    # if current_sum + num < 0:
+    #     current_sum = num # 전부 음수인 경우도 확인
+    # else:
+    #     current_sum += num
     max_sum = max(max_sum, current_sum)
     # print(num, current_sum, max_sum)
 
