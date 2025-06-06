@@ -11,7 +11,7 @@ w, v = list(w), list(v)
 gems = list(zip(w, v))
 
 # 1
-gems = sorted(gems, key=lambda arr: arr[1]/arr[0], reverse=True)
+# gems = sorted(gems, key=lambda arr: arr[1]/arr[0], reverse=True)
 
 # 2
 current_weight = 0
