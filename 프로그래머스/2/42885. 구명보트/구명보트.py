@@ -6,13 +6,12 @@ def solution(people, limit):
     # 2. 맨 앞(무겁) + 맨 뒤 조합이 가능한지 확인, 가능하면 빼고 구명보트 개수 +1
     # 3. 불가하다면 맨 앞 + 맨 뒤 -1 조합이 가능한지 확인.
     # 4. 사람이 아무도 안 남을 때까지 반복, 끝난 후 구명보트 개수 반환
-    ## 시간 초과 보완: [1:-1] 슬라이싱 대신 포인터 사용 - 시작, 끝
+    ## 시간 초과 보완: [1:-1] 슬라이싱 대신 투 포인터 사용 - 시작, 끝
     answer = 0
     people.sort(reverse=True)
     start = 0
     end = len(people)-1
     
-    # while(len(people) > 0):
     while start < end:
         if people[start] + people[end] <= limit:
             start += 1
@@ -22,6 +21,7 @@ def solution(people, limit):
         
         answer += 1
         
+    # 홀수명일 경우 start와 end가 같아질 것이므로 마지막 하나만 처리
     if start == end:
         answer += 1
         
