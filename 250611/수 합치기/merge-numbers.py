@@ -11,10 +11,10 @@ heapq.heapify(arr)
 cost = 0
 while(len(arr) > 1):
     # arr.sort(reverse=True) # O(N)
-    print(arr)
-    sub_sum = heapq.heappop(arr) + heapq.heappop(arr)
     # sub_sum = arr.pop() + arr.pop()
+    sub_sum = heapq.heappop(arr) + heapq.heappop(arr)
     cost += sub_sum
     # arr.append(sub_sum)
+    heapq.heappush(arr, sub_sum) # 합친 값 다시 추가
 
 print(cost)
